@@ -1,0 +1,18 @@
+{
+    "controls": "नियंत्रण",
+    "source-code": "स्रोत कोड",
+    "language": "भाषा",
+    "score": "स्कोर",
+    "arrow": "तीर",
+    "remaining-golds": "शेष सोने",
+    "share": "साझा करें",
+    "settings-remove-walls": "दीवारें हटाएं",
+    "settings-volume": "आवाज़",
+    "game-over": "खेल समाप्त",
+    "restart": "पुनः आरंभ करें",
+    "congratulations": "बधाई हो",
+    "close": "बंद करें",
+    "info": "जानकारी",
+    "settings": "सेटिंग्स",
+    "no-canvas-support": "आपका ब्राउज़र कैनवास का समर्थन नहीं करता है।"
+}

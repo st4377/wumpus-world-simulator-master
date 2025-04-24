@@ -1,0 +1,18 @@
+{
+    "controls": "Controls",
+    "source-code": "Source Code",
+    "language": "Language",
+    "score": "Score",
+    "arrow": "Arrow",
+    "remaining-golds": "Remaining Golds",
+    "share": "Share",
+    "settings-remove-walls": "Remove Walls",
+    "settings-volume": "Volume",
+    "game-over": "Game Over",
+    "restart": "Restart",
+    "congratulations": "Congratulations",
+    "close": "Close",
+    "info": "Info",
+    "settings": "Settings",
+    "no-canvas-support": "Your browser does not support canvas."
+}
