@@ -1,85 +1,86 @@
 body {
-    background-color: #f5f5f5; /* Restore the light gray background */
-    color: #646464; /* Restore the default text color */
+    background-color: #f5f5f5;
+    color: #646464;
     margin-top: 80px;
 }
+
 #score {
     font-weight: bold;
-    color: #ff0000; /* Red color for better visibility */
+    color: #ff0000;
     padding-right: 10px;
 }
 
-.card-game{
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+.card-game {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                0 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0 1px 5px 0 rgba(0, 0, 0, 0.12);
     background: #fff;
     border-radius: 2px;
     box-sizing: border-box;
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-.sidebar{
-    background-color: white;
+.sidebar {
+    background-color: #fff;
 }
+
 /**********************************
-* Navbar                          *
+* Navbar
 **********************************/
-
 .navbar {
     background-color: rgba(72, 120, 160, 1) !important;
     box-shadow: 0px 1.5px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
-.navbar .navbar-brand {
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #fff !important;
     text-decoration: none;
-    color: rgba(255, 255, 255, 1) !important;
+    background-color: transparent !important;
 }
 
-.navbar .nav-link{
-    color: rgba(255, 255, 255, 1) !important;
-    background-color: rgba(248, 248, 248, 0) !important;
-}
-
-.navbar .nav-link:hover{
+.navbar .nav-link:hover {
     color: rgba(44, 75, 102, 1) !important;
-    background-color: rgba(248, 248, 248, 0) !important;
+    background-color: transparent !important;
 }
 
 #languageDropdown {
-    background-color: red; /* Set background color to red */
-    color: white; /* Set text color to white for better contrast */
-    border: none; /* Remove border */
+    background-color: red;
+    color: #fff;
+    border: none;
 }
 
 #languageDropdown:hover {
-    background-color: darkred; /* Darker red on hover */
+    background-color: darkred;
 }
 
+/* Game Over Image Frame */
 .game-over-image-frame {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    border: 5px solid #fff; /* White border for the frame */
-    border-radius: 15px; /* Rounded corners for the frame */
-    background-color: #000; /* Black background for contrast */
+    border: 5px solid #fff;
+    border-radius: 15px;
+    background-color: #000;
     margin: 20px auto;
-    max-width: 90%; /* Ensure the frame doesn't exceed modal width */
+    max-width: 90%;
 }
 
 .game-over-image {
-    max-width: 100%; /* Scale the image to fit the frame */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners for the image */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-/* Style for the Share button */
+/* Share Button */
 .btn-success[data-i18n="share"] {
-    background-color: red !important; /* Set background color to red */
-    border-color: red !important; /* Match border color */
-    color: white !important; /* Ensure text is visible */
+    background-color: red !important;
+    border-color: red !important;
+    color: #fff !important;
 }
 
 .btn-success[data-i18n="share"]:hover {
-    background-color: darkred !important; /* Darker red on hover */
+    background-color: darkred !important;
     border-color: darkred !important;
 }
