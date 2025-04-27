@@ -4,9 +4,10 @@ body {
     margin-top: 80px;
 }
 
-#score, #arrow, #gold{
+#score {
     font-weight: bold;
-    padding-right: 20px;
+    color: #ff0000; /* Red color for better visibility */
+    padding-right: 10px;
 }
 
 .card-game{
@@ -45,11 +46,29 @@ body {
 }
 
 #languageDropdown {
-    background-color: darkred; /* Set background color to dark red */
+    background-color: red; /* Set background color to red */
     color: white; /* Set text color to white for better contrast */
     border: none; /* Remove border */
 }
 
 #languageDropdown:hover {
-    background-color: crimson; /* Slightly lighter red on hover */
+    background-color: darkred; /* Darker red on hover */
+}
+
+.game-over-image-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 5px solid #fff; /* White border for the frame */
+    border-radius: 15px; /* Rounded corners for the frame */
+    background-color: #000; /* Black background for contrast */
+    margin: 20px auto;
+    max-width: 90%; /* Ensure the frame doesn't exceed modal width */
+}
+
+.game-over-image {
+    max-width: 100%; /* Scale the image to fit the frame */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
 }

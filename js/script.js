@@ -1,4 +1,3 @@
-
 var canvas,			// Canvas DOM element
 	ctx,
     keys,
@@ -84,9 +83,7 @@ function update(){
 		isAlive = false;
 	}
 
-	$("#score").html(player.score);
-	$("#arrow").html(player.arrow);
-	$("#gold").html(env.golds.length);
+	updateScore(player.score); // Update the score display
 
 	if(!isAlive){
 		displayGameOver();
@@ -97,7 +94,30 @@ function update(){
 	}
 }
 
-function displayGameOver(){
+let score = 0; // Initialize the score at 0
+
+function updateScore(points) {
+    score += points; // Add or subtract points
+    $('#score').text(score); // Update the score display
+}
+
+// Deduct 10 points for each move
+function onPlayerMove() {
+    updateScore(-10); // Deduct 10 points for each move
+}
+
+// Add 1000 points for collecting gold
+function onGoldCollected() {
+    updateScore(1000); // Add 1000 points for collecting gold
+}
+
+// Deduct 100 points for shooting an arrow
+function onArrowShot() {
+    updateScore(-100); // Deduct 100 points for shooting an arrow
+}
+
+// Stop updating the score when the game ends
+function displayGameOver() {
     $("#modal-game-over").modal("show");
     resources.play("game-over", false);
     resources.stop("theme");

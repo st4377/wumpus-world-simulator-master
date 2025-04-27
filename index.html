@@ -17,7 +17,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <!-- Favicons to all plataforms -->
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
@@ -57,21 +57,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-controls" data-i18n="controls">Controls</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/thiagodnf/wumpus-world-simulator" data-i18n="source-code" target="_blank">Source Code</a>
-                    </li>
                 </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            Language
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                            <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
-                            <li><a class="dropdown-item" href="#" data-lang="hi">Hindi</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-secondary dropdown-toggle" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="language">
+                        Language
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                    </ul>
+                </form>
             </div><!--/.nav-collapse -->
         </div>
     </nav>
@@ -143,7 +137,11 @@
             <div class="modal-content">
                 <div class="modal-body text-center">
                     <h3 data-i18n="game-over">Game Over</h3>
-                    <img src="img/WhatsApp Image 2025-04-25 at 01.10.11_9de91c9e.jpg" alt="Sorry! game over" style="width: 300px; height: 200px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+                    <div class="game-over-image-frame">
+                        <img src="img/WhatsApp Image 2025-04-25 at 01.10.11_9de91c9e.jpg" 
+                             alt="Game Over" 
+                             class="game-over-image">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary btn-restart" data-i18n="restart">Restart</button>
