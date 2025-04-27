@@ -72,3 +72,15 @@ body {
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Rounded corners for the image */
 }
+
+/* Style for the Share button */
+.btn-success[data-i18n="share"] {
+    background-color: red !important; /* Set background color to red */
+    border-color: red !important; /* Match border color */
+    color: white !important; /* Ensure text is visible */
+}
+
+.btn-success[data-i18n="share"]:hover {
+    background-color: darkred !important; /* Darker red on hover */
+    border-color: darkred !important;
+}
