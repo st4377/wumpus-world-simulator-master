@@ -1,9 +1,8 @@
 body {
-    background-color: #000; /* Change background color to black */
-    color: #646464;
+    background-color: #f5f5f5; /* Restore the light gray background */
+    color: #646464; /* Restore the default text color */
     margin-top: 80px;
 }
-
 #score {
     font-weight: bold;
     color: #ff0000; /* Red color for better visibility */
