@@ -6,13 +6,11 @@ var canvas,			// Canvas DOM element
 	isFinished = false,
     player;
 
-function restart(){
-
-    if (!env){
+function restart() {
+    if (!env) {
         env = new Environment(15, 8, 64, 64);
     }
 
-    // We need to create a new environment if it is the first time of the player won
     if (isFinished) {
         env = new Environment(15, 8, 64, 64);
     } else {
@@ -29,8 +27,10 @@ function restart(){
     resources.stop("win");
     resources.play("theme", false);
 
-    isAlive = true,
-	isFinished = false,
+    isAlive = true;
+    isFinished = false;
+
+    resetScore(); // Reset the score when restarting the game
 
     animate();
 }
@@ -54,13 +54,13 @@ function onKeydown(e) {
 function update(){
 
 	if (player.update(keys)) {
-		player.score -= 10;
+		updateScore(-10); // Deduct 10 points only for valid moves
 	}
 
 	var deadWumpus = player.kill(keys);
 
 	if (deadWumpus) {
-		player.score += 1000;
+		updateScore(1000); // Add 1000 points for killing a Wumpus
         env.removeWumpus(deadWumpus);
 	}
 
@@ -68,7 +68,7 @@ function update(){
 
 	if (capturedGold) {
 
-        player.score += 1000;
+        updateScore(1000); // Add 1000 points for collecting gold
 
 		env.removeGold(capturedGold);
 
@@ -82,8 +82,6 @@ function update(){
 	if(env.hasAHole(player) || env.hasAWumpus(player)){
 		isAlive = false;
 	}
-
-	updateScore(player.score); // Update the score display
 
 	if(!isAlive){
 		displayGameOver();
@@ -101,22 +99,11 @@ function updateScore(points) {
     $('#score').text(score); // Update the score display
 }
 
-// Deduct 10 points for each move
-function onPlayerMove() {
-    updateScore(-10); // Deduct 10 points for each move
+function resetScore() {
+    score = 0; // Reset the score to 0
+    $('#score').text(score); // Update the score display
 }
 
-// Add 1000 points for collecting gold
-function onGoldCollected() {
-    updateScore(1000); // Add 1000 points for collecting gold
-}
-
-// Deduct 100 points for shooting an arrow
-function onArrowShot() {
-    updateScore(-100); // Deduct 100 points for shooting an arrow
-}
-
-// Stop updating the score when the game ends
 function displayGameOver() {
     $("#modal-game-over").modal("show");
     resources.play("game-over", false);
