@@ -18,6 +18,8 @@ function restart() {
     }
 
     player = new Player(env, 0, 0);
+    player.arrow = 10; // Reset the arrow count to 10
+    player.updateArrowCount(); // Update the arrow count in the UI
 
     $("#modal-win").modal("hide");
     $("#modal-game-over").modal("hide");

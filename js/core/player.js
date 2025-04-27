@@ -51,6 +51,8 @@ var Player = function(env, x, y) {
             }
         }
 
+        this.updateArrowCount(); // Update the arrow count in the UI after using an arrow
+
         return deadWumpus;
     };
 
@@ -136,4 +138,11 @@ var Player = function(env, x, y) {
             ctx.drawImage(resources.images['facing_to_right'], this.x, this.y, this.env.width, this.env.height);
         }
 	};
+
+    this.updateArrowCount = function() {
+        $('#arrow').text(this.arrow); // Update the arrow count in the UI
+    };
+
+    // Call updateArrowCount initially to set the arrow count in the UI
+    this.updateArrowCount();
 };
