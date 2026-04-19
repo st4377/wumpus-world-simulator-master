@@ -24,25 +24,9 @@ Access the simulator [here](http://thiagodnf.github.io/wumpus-world-simulator/).
   <img class="screenshot" src="https://raw.githubusercontent.com/thiagodnf/wumpus-world-simulator/master/img/screenshot.png"/>
 </kbd>
 
-## Languages
-The Wumpus World Simulator is available at following languages:
-* en-US
-* pt-BR
-* ar
-* fr
-* tr_TR
 
-## Questions or Suggestions
 
-Feel free to create <a href="https://github.com/thiagodnf/wumpus-world-simulator/issues">issues</a> here as you need
-
-## Contribute
-
-Contributions to the this project are very welcome! We can't do this alone! Feel free to fork this project, work on it and then make a pull request.
-
-## Authors
-
-* **Thiago Ferreira** - *Initial work*
+ 
 
 See also the list of [contributors](https://github.com/thiagodnf/wumpus-world-simulator/graphs/contributors) who participated in this project.
 
